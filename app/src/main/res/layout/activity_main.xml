@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.example.adith.sendreceiveblue.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#81c784">
+
+        <ImageView
+            android:id="@+id/ima"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/transwhite" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/title_paired_devices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar"
+        android:paddingLeft="4dp"
+        android:paddingTop="8dp"
+        android:text="Paired Devices"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/paired_devices"
+        android:layout_width="match_parent"
+        android:layout_height="325dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/title_paired_devices"
+        android:background="@drawable/listview"
+        android:divider="#EEEEEE"
+        android:dividerHeight="1dp" />
+
+    <ImageView
+        android:id="@+id/sun"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/sunicon"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/connecting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sun"
+        android:layout_centerHorizontal="true"
+        android:text="aysyfb"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/settings"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/paired_devices"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bluepair" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settings"
+        android:layout_centerHorizontal="true"
+        android:text="Pair new device"
+        android:textSize="16sp" />
+</RelativeLayout>

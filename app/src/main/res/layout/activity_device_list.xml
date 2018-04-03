@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#81c784">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/transwhite" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/t"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/Oc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_toRightOf="@+id/t"
+        android:text="°C"
+        android:textSize="22sp" />
+
+    <SeekBar
+        android:id="@+id/etTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:hint="Set Temperature"
+        android:max="99"
+        android:min="10"
+        android:padding="4dp" />
+
+
+    <Button
+        android:id="@+id/autoMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etTemp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/button"
+        android:padding="4dp"
+        android:text="Auto/Manual Mode"
+        android:textColor="#ffffff" />
+
+
+    <Button
+        android:id="@+id/dayMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/autoMode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/button"
+        android:padding="4dp"
+        android:text="day/night mode"
+        android:textColor="#ffffff" />
+
+
+    <TextView
+        android:id="@+id/sensorView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sensorView0"
+        android:layout_centerHorizontal="true"
+        android:text="Reading Temperature = ????"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/sensorView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sensorView1"
+        android:layout_centerHorizontal="true"
+        android:text="Auto/Manual????"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/sensorView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sensorView2"
+        android:layout_centerHorizontal="true"
+        android:text="Day/Night????"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/sensorView0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Set Temperature = ????"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/sensorView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sensorView3"
+        android:layout_centerHorizontal="true"
+        android:text="Coil is ????"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
