@@ -1,6 +1,5 @@
 package com.example.adith.sendreceiveblue;
 
-import android.app.ProgressDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
@@ -8,6 +7,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -33,9 +36,9 @@ public class DeviceListActivity extends AppCompatActivity {
     SeekBar temp;
     Button dayNightMode, autoManualMode;
     TextView t, c;
-    TextView txtArduino, sensorView0, sensorView1, sensorView2, sensorView3, sensorView4;
+    TextView sensorView0, sensorView1, sensorView2, sensorView3, sensorView4;
     Handler bluetoothIn;
-    ProgressDialog mProgressDialog1;
+    Toolbar toolbar;
     private BluetoothAdapter btAdapter = null;
     private BluetoothSocket btSocket = null;
     private StringBuilder recDataString = new StringBuilder();
@@ -108,6 +111,10 @@ public class DeviceListActivity extends AppCompatActivity {
         };
         btAdapter = BluetoothAdapter.getDefaultAdapter();       // get Bluetooth adapter
         checkBTState();
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         dayNightMode.setOnClickListener(new OnClickListener() {
             @Override
@@ -210,6 +217,28 @@ public class DeviceListActivity extends AppCompatActivity {
                 startActivityForResult(enableBtIntent, 1);
             }
         }
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_send_rec, menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.settings:
+                break;
+            case R.id.help:
+                break;
+            case R.id.contact:
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     //create new class for connect thread
